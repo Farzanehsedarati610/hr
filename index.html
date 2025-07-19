@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Symbolic Admin Console</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="config.js" defer></script>
+  <script src="admin-tools.js" defer></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <h1>🔐 Symbolic HR Console</h1>
+
+  <!-- Microsoft HR Assistant Embed -->
+  <iframe src="https://assistant.microsoft.com/hr?session=admin"
+          id="msAssistant"></iframe>
+
+  <div id="chatbox">
+    <textarea id="chatInput" placeholder="Route request or status inquiry..."></textarea>
+    <button onclick="processChat()">Submit</button>
+  </div>
+
+  <div id="editorOverlay">
+    <textarea id="liveEditArea" placeholder="Paste live routing logic..."></textarea>
+    <button onclick="commitChanges()">Commit & Publish</button>
+  </div>
+
+  <div id="statusLog"></div>
+</body>
+</html>
+
